@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanchard - художественная галерея</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper header__wrapper_black">
+      <div class="container container_no-mb container_md container_sm container_xsm">
+        <div class="nav header__nav_main">
+          <button class="btn burger nav__burger" id="burger" aria-label="Бургер-меню">
+            <svg class="burger__icon" width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white"/>
+              <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+              <path d="M24 25.0478H0V28.7H24V25.0478Z" fill="white"/>
+            </svg>
+          </button>
+
+          <img class="logo header__logo" src="img/logo.svg" alt="Blanchard - художественная галерея">
+          
+          <form class="nav__search-form search-form__main" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+            <button class="btn search-form__btn" type="submit" aria-label="Поиск по сайту">
+              <svg class="search-form__icon" width="22" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+              </svg>
+            </button>
+            
+            <!-- <input class="search-form__input" type="search" name="text" placeholder="Поиск по сайту" required aria-label="Введите информацию, которую хотели бы найти"> -->
+          </form>
+
+          <div class="header__burger-container" id="menu">
+            <nav class="nav__nav-list">
+              <button class="btn exit-btn" id="exit">
+                <svg class="exit-btn__icon" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2.63635" width="37.2838" height="3.72838" transform="rotate(45 2.63635 0)" fill="white"/>
+                  <rect x="0.00012207" y="26.3635" width="37.2838" height="3.72838" transform="rotate(-45 0.00012207 26.3635)" fill="white"/>
+                </svg>
+              </button>
+  
+              <ul class="nav-list_main">
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    О нас
+                  </a>
+                </li>
+      
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    Галерея
+                  </a>
+                </li>
+      
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    Каталог
+                  </a>
+                </li>
+      
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    События
+                  </a>
+                </li>
+      
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    Издания
+                  </a>
+                </li>
+      
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    Проекты
+                  </a>
+                </li>
+      
+                <li class="nav__item nav__item_main">
+                  <a class="nav__link_main" href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+    
+            <button class="btn nav__log-in-btn" aria-label="Войти в личный кабинет">
+              <svg class="log-in-btn__icon" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+              </svg>
+  
+              Войти
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <div class="header__wrapper header__wrapper_gray">
+      <div class="container container_no-mb container_md container_sm container_xsm">
+        <div class="nav header__nav_secondary">
+          <ul class="nav__nav-list nav__nav-list_secondary">
+            <li class="nav__item nav__item_secondary dropdown">
+              <button class="btn dropdown_btn" id="dropdown_btn_1" type="button">Реализм</button>
+
+              <div class="dropdown__scroll-container scroll-container" id="scroll-container_1">
+                <ul class="scroll-container__scroll scroll" data-simplebar>
+                  <li class="scroll__item scroll__item-1_1">
+                    <a class="scroll__link" href="">Тинторетто</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_2">
+                    <a class="scroll__link" href="">Фридрих</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_3">
+                    <a class="scroll__link" href="">Леонардо</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_4">
+                    <a class="scroll__link" href="">Верроккьо</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_1">
+                    <a class="scroll__link" href="">Тинторетто</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_2">
+                    <a class="scroll__link" href="">Фридрих</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_3">
+                    <a class="scroll__link" href="">Леонардо</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-1_4">
+                    <a class="scroll__link" href="">Верроккьо</a>
+                  </li>
+                  </ul>
+              </div>
+            </li>
+  
+            <li class="nav__item nav__item_secondary">
+              <button class="btn dropdown_btn" id="dropdown_btn_2" type="button">Импрессионизм</button>
+
+            </li>
+  
+            <li class="nav__item nav__item_secondary">
+              <button class="btn dropdown_btn" id="dropdown_btn_3" type="button">Постимпрессионизм</button>
+
+            </li>
+  
+            <li class="nav__item nav__item_secondary">
+              <button class="btn dropdown_btn" id="dropdown_btn_4" type="button">Авангард</button>
+
+            </li>
+  
+            <li class="nav__item nav__item_secondary">
+              <button class="btn dropdown_btn" id="dropdown_btn_5" type="button">Футуризм</button>
+
+            </li>
+          </ul>
+  
+          <form class="nav__search-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+            <button class="btn search-form__btn" type="submit" aria-label="Поиск по сайту">
+              <svg class="search-form__icon" width="22" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+              </svg>
+            </button>
+            
+            <input class="search-form__input" type="search" name="text" placeholder="Поиск по сайту" required aria-label="Введите информацию, которую хотели бы найти">
+          </form>
+        </div>
+      </div>
+    </div> 
+  </header>
+  
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="js/nav_seconrdary_toggle.js"></script>
+<script src="js/burger.js"></script>
+</body>
+</html>
