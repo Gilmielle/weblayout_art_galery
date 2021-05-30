@@ -9,9 +9,14 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
 
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
 </head>
@@ -19,8 +24,8 @@
 <body>
   <header class="header">
     <div class="header__wrapper header__wrapper_black">
-      <div class="container container_no-mb container_md container_sm container_xsm">
-        <div class="nav header__nav_main">
+      <div class="container container_md container_sm container_xsm">
+        <div class="nav header__nav header__nav_main">
           <button class="btn burger nav__burger" id="burger" aria-label="Бургер-меню">
             <svg class="burger__icon" width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white"/>
@@ -43,7 +48,7 @@
           </form>
 
           <div class="header__burger-container" id="menu">
-            <nav class="nav__nav-list">
+            <nav class="nav__list">
               <button class="btn exit-btn" id="exit">
                 <svg class="exit-btn__icon" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="2.63635" width="37.2838" height="3.72838" transform="rotate(45 2.63635 0)" fill="white"/>
@@ -51,45 +56,45 @@
                 </svg>
               </button>
   
-              <ul class="nav-list_main">
+              <ul class="nav__wrapper">
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     О нас
                   </a>
                 </li>
       
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     Галерея
                   </a>
                 </li>
       
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     Каталог
                   </a>
                 </li>
       
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     События
                   </a>
                 </li>
       
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     Издания
                   </a>
                 </li>
       
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     Проекты
                   </a>
                 </li>
       
                 <li class="nav__item nav__item_main">
-                  <a class="nav__link_main" href="#">
+                  <a class="nav__link" href="#">
                     Контакты
                   </a>
                 </li>
@@ -109,9 +114,9 @@
     </div>
         
     <div class="header__wrapper header__wrapper_gray">
-      <div class="container container_no-mb container_md container_sm container_xsm">
-        <div class="nav header__nav_secondary">
-          <ul class="nav__nav-list nav__nav-list_secondary">
+      <div class="container container_md container_sm container_xsm">
+        <div class="nav header__nav header__nav_secondary">
+          <ul class="nav__list nav__list_secondary">
             <li class="nav__item nav__item_secondary dropdown">
               <button class="btn dropdown_btn" id="dropdown_btn_1" type="button">Реализм</button>
 
@@ -148,28 +153,164 @@
                   <li class="scroll__item scroll__item-1_4">
                     <a class="scroll__link" href="">Верроккьо</a>
                   </li>
-                  </ul>
+                </ul>
               </div>
             </li>
   
             <li class="nav__item nav__item_secondary">
               <button class="btn dropdown_btn" id="dropdown_btn_2" type="button">Импрессионизм</button>
+              <div class="dropdown__scroll-container scroll-container" id="scroll-container_2">
+                <ul class="scroll-container__scroll scroll" data-simplebar>
+                  <li class="scroll__item scroll__item-2_1">
+                    <a class="scroll__link" href="">Моне</a>
+                  </li>
 
+                  <li class="scroll__item scroll__item-2_2">
+                    <a class="scroll__link" href="">Мане</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-2_3">
+                    <a class="scroll__link" href="">Ренуар</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-2_4">
+                    <a class="scroll__link" href="">Дега</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-2_1">
+                    <a class="scroll__link" href="">Моне</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-2_2">
+                    <a class="scroll__link" href="">Мане</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-2_3">
+                    <a class="scroll__link" href="">Ренуар</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-2_4">
+                    <a class="scroll__link" href="">Дега</a>
+                  </li>
+                </ul>
+              </div>
             </li>
   
             <li class="nav__item nav__item_secondary">
               <button class="btn dropdown_btn" id="dropdown_btn_3" type="button">Постимпрессионизм</button>
+              <div class="dropdown__scroll-container scroll-container" id="scroll-container_3">
+                <ul class="scroll-container__scroll scroll" data-simplebar>
+                  <li class="scroll__item scroll__item-3_1">
+                    <a class="scroll__link" href="">Ван Гог</a>
+                  </li>
 
+                  <li class="scroll__item scroll__item-3_2">
+                    <a class="scroll__link" href="">Тулуз-Лотрек</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-3_3">
+                    <a class="scroll__link" href="">Сезанн</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-3_4">
+                    <a class="scroll__link" href="">Руссо</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-3_1">
+                    <a class="scroll__link" href="">Ван Гог</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-3_2">
+                    <a class="scroll__link" href="">Тулуз-Лотрек</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-3_3">
+                    <a class="scroll__link" href="">Сезанн</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-3_4">
+                    <a class="scroll__link" href="">Руссо</a>
+                  </li>
+                </ul>
+              </div>
             </li>
   
             <li class="nav__item nav__item_secondary">
               <button class="btn dropdown_btn" id="dropdown_btn_4" type="button">Авангард</button>
+              <div class="dropdown__scroll-container scroll-container" id="scroll-container_4">
+                <ul class="scroll-container__scroll scroll" data-simplebar>
+                  <li class="scroll__item scroll__item-4_1">
+                    <a class="scroll__link" href="">Мунк</a>
+                  </li>
 
+                  <li class="scroll__item scroll__item-4_2">
+                    <a class="scroll__link" href="">Малевич</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-4_3">
+                    <a class="scroll__link" href="">Кандинский</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-4_4">
+                    <a class="scroll__link" href="">Шагал</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-4_1">
+                    <a class="scroll__link" href="">Мунк</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-4_2">
+                    <a class="scroll__link" href="">Малевич</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-4_3">
+                    <a class="scroll__link" href="">Кандинский</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-4_4">
+                    <a class="scroll__link" href="">Шагал</a>
+                  </li>
+                </ul>
+              </div>
             </li>
   
             <li class="nav__item nav__item_secondary">
               <button class="btn dropdown_btn" id="dropdown_btn_5" type="button">Футуризм</button>
+              <div class="dropdown__scroll-container scroll-container" id="scroll-container_5">
+                <ul class="scroll-container__scroll scroll" data-simplebar>
+                  <li class="scroll__item scroll__item-5_1">
+                    <a class="scroll__link" href="">Балла</a>
+                  </li>
 
+                  <li class="scroll__item scroll__item-5_2">
+                    <a class="scroll__link" href="">Северини</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-5_3">
+                    <a class="scroll__link" href="">Стелла</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-5_4">
+                    <a class="scroll__link" href="">Эвола</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-5_1">
+                    <a class="scroll__link" href="">Балла</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-5_2">
+                    <a class="scroll__link" href="">Северини</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-5_3">
+                    <a class="scroll__link" href="">Стелла</a>
+                  </li>
+
+                  <li class="scroll__item scroll__item-5_4">
+                    <a class="scroll__link" href="">Эвола</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
   

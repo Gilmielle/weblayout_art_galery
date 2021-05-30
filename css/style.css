@@ -68,11 +68,7 @@ p {
 .container {
   max-width: 1650px;
   margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-.container_no-mb {
-  margin-bottom: 0;
+  padding: 0 25px;
 }
 
 .btn {
