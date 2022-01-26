@@ -25,8 +25,8 @@
   <header class="header">
     <div class="header__wrapper header__wrapper_black">
       <div class="container container_md container_sm container_xsm">
-        <div class="nav header__nav header__nav_main">
-          <button class="btn burger nav__burger" id="burger" aria-label="Бургер-меню">
+        <div class="header__main-navigation main-navigation">
+          <button class="main-navigation__burger btn burger" id="burger" aria-label="Бургер-меню">
             <svg class="burger__icon" width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.699997)" fill="white"/>
               <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
@@ -34,9 +34,9 @@
             </svg>
           </button>
 
-          <img class="logo header__logo" src="img/logo.svg" alt="Blanchard - художественная галерея">
+          <img class="main-navigation__logo logo" src="img/logo.svg" alt="Blanchard - художественная галерея">
           
-          <form class="nav__search-form search-form__main" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+          <form class="main-navigation__search-form search-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
             <button class="btn search-form__btn" type="submit" aria-label="Поиск по сайту">
               <svg class="search-form__icon" width="22" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
@@ -45,61 +45,61 @@
             </button>
           </form>
 
-          <div class="header__burger-container" id="menu">
-            <nav class="nav__list">
-              <button class="btn exit-btn" id="exit">
+          <div class="main-navigation__site-navigation" id="menu">
+            <nav class="site-navigation">
+              <button class="site-navigation__btn btn exit-btn" id="exit">
                 <svg class="exit-btn__icon" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="2.63635" width="37.2838" height="3.72838" transform="rotate(45 2.63635 0)" fill="white"/>
                   <rect x="0.00012207" y="26.3635" width="37.2838" height="3.72838" transform="rotate(-45 0.00012207 26.3635)" fill="white"/>
                 </svg>
               </button>
   
-              <ul class="nav__wrapper">
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+              <ul class="site-navigation__wrapper">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     О нас
                   </a>
                 </li>
       
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     Галерея
                   </a>
                 </li>
       
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     Каталог
                   </a>
                 </li>
       
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     События
                   </a>
                 </li>
       
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     Издания
                   </a>
                 </li>
       
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     Проекты
                   </a>
                 </li>
       
-                <li class="nav__item nav__item_main">
-                  <a class="nav__link" href="#">
+                <li class="site-navigation__item">
+                  <a class="site-navigation__link" href="#">
                     Контакты
                   </a>
                 </li>
               </ul>
             </nav>
     
-            <button class="btn nav__log-in-btn" aria-label="Войти в личный кабинет">
+            <button class="site-navigation__log-in-btn log-in-btn btn" aria-label="Войти в личный кабинет">
               <svg class="log-in-btn__icon" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
               </svg>
@@ -113,9 +113,9 @@
         
     <div class="header__wrapper header__wrapper_gray">
       <div class="container container_md container_sm container_xsm">
-        <div class="nav header__nav header__nav_secondary">
-          <ul class="nav__list nav__list_secondary">
-            <li class="nav__item nav__item_secondary dropdown">
+        <div class="header__secondary-navigation">
+          <ul class="secondary-navigation">
+            <li class="secondary-navigation__item dropdown">
               <button class="btn dropdown__btn" id="dropdown__btn_1" type="button">
                 Реализм
                 <svg class="dropdown__icon" id="dropdown__icon_1" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +160,7 @@
               </div>
             </li>
   
-            <li class="nav__item nav__item_secondary">
+            <li class="secondary-navigation__item dropdown">
               <button class="btn dropdown__btn" id="dropdown__btn_2" type="button">
                 Импрессионизм
                 <svg class="dropdown__icon" id="dropdown__icon_2" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +204,7 @@
               </div>
             </li>
   
-            <li class="nav__item nav__item_secondary">
+            <li class="secondary-navigation__item dropdown">
               <button class="btn dropdown__btn" id="dropdown__btn_3" type="button">
                 Постимпрессионизм
                 <svg class="dropdown__icon" id="dropdown__icon_3" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,7 +248,7 @@
               </div>
             </li>
   
-            <li class="nav__item nav__item_secondary">
+            <li class="secondary-navigation__item dropdown">
               <button class="btn dropdown__btn" id="dropdown__btn_4" type="button">
                 Авангард
                 <svg class="dropdown__icon" id="dropdown__icon_4" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +292,7 @@
               </div>
             </li>
   
-            <li class="nav__item nav__item_secondary">
+            <li class="secondary-navigation__item dropdown">
               <button class="btn dropdown__btn" id="dropdown__btn_5" type="button">
                 Футуризм
                 <svg class="dropdown__icon" id="dropdown__icon_5" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -337,7 +337,7 @@
             </li>
           </ul>
   
-          <form class="nav__search-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+          <form class="secondary-navigation__search-form search-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
             <button class="btn search-form__btn" type="submit" aria-label="Поиск по сайту">
               <svg class="search-form__icon" width="22" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
