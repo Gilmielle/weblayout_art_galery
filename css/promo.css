@@ -1,0 +1,147 @@
+.promo {
+  min-height: 800px;
+  width: 100%;
+  padding-top: 243px; 
+  color: var(--text-color-accent);
+  background-color: var(--text-color-main);
+  background-image: url("../img/promo/swiper-1-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__content {
+  max-width: 580px;
+  padding-bottom: 30px;
+}
+
+.promo__title {
+  margin-bottom: 19px;
+  font-weight: bold;
+  font-size: 71px;
+  line-height: 82px;
+}
+
+.promo__description {
+  margin-bottom: 92px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--text-color-accent);
+}
+
+.promo__link {
+  display: inline-block;
+  padding: 22px 35px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  background-color: var(--link-color);
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 3px transparent;
+  transition: box-shadow 0.3s ease-in-out,
+              background-color 0.3s ease-in-out;
+}
+
+.promo__link:hover {
+  box-shadow: inset 0 0 0 3px #D1A9F0;
+}
+
+.promo__link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #FFFFFF,
+              0 0 0 5px #C283F3;
+}
+
+.promo__link:active {
+  box-shadow: inset 0 0 0 3px #D1A9F0;
+  background-color: var(--link-color-active);
+}
+
+@media (max-width: 1024px) {
+  .promo {
+    min-height: 768px;
+    padding-top: 214px;
+    background-image: url("../img/promo/swiper-1-tablet.jpg");
+  }
+
+  .promo__content {
+    max-width: 660px;
+  }
+
+  .promo__title {
+    max-width: 580px;
+    margin-bottom: 12px;
+    letter-spacing: 0.7px;
+  }
+
+  .promo__description {
+    transform: translateX(5px);
+    margin-bottom: 134px;
+  }
+
+  .promo__link {
+    transform: translateX(7px);
+  }
+}
+
+@media (max-width: 768px) {
+  .promo {
+    background-image: url("../img/promo/swiper-1-mobile.jpg");
+  }
+}
+
+@media (max-width: 665px) {
+  .promo__title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .promo {
+    padding-top: 77px;
+    min-height: 355px;
+  }
+
+  .promo__content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .promo__title {
+    font-size: 37px;
+    line-height: 44px;
+  }
+
+  .promo__description {
+    margin-bottom: 40px;
+    font-weight: normal;
+    transform: none;
+  }
+
+  .promo__link {
+    padding: 12px 19px;
+    font-size: 16px;
+    transform: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .promo__title {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0px;
+  }
+
+  .promo__description {
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .promo__link {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
