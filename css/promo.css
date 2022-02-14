@@ -1,13 +1,50 @@
 .promo {
+  position: relative;
   min-height: 800px;
   width: 100%;
   padding-top: 243px; 
   color: var(--text-color-accent);
+  overflow: hidden;
+}
+
+.promo__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
   background-color: var(--text-color-main);
   background-image: url("../img/promo/swiper-1-desktop.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-animation: change-bg 5s linear alternate infinite;
+          animation: change-bg 5s linear alternate infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes change-bg {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes change-bg {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .promo__content {
@@ -39,23 +76,35 @@
   text-align: center;
   background-color: var(--link-color);
   border-radius: 100px;
-  box-shadow: inset 0 0 0 3px transparent;
+  -webkit-transition: background-color 0.3s ease-in-out,
+              -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out,
+              -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out,
+              background-color 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out,
               background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out,
+              background-color 0.3s ease-in-out,
+              -webkit-box-shadow 0.3s ease-in-out;
 }
 
 .promo__link:hover {
-  box-shadow: inset 0 0 0 3px #D1A9F0;
+  -webkit-box-shadow: inset 0 0 0 3px var(--link-color-light);
+          box-shadow: inset 0 0 0 3px var(--link-color-light);
 }
 
 .promo__link:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #FFFFFF,
+  -webkit-box-shadow: 0 0 0 3px #FFFFFF,
+              0 0 0 5px #C283F3;
+          box-shadow: 0 0 0 3px #FFFFFF,
               0 0 0 5px #C283F3;
 }
 
 .promo__link:active {
-  box-shadow: inset 0 0 0 3px #D1A9F0;
+  -webkit-box-shadow: inset 0 0 0 3px var(--link-color-light);
+          box-shadow: inset 0 0 0 3px var(--link-color-light);
   background-color: var(--link-color-active);
 }
 
@@ -63,6 +112,10 @@
   .promo {
     min-height: 768px;
     padding-top: 214px;
+  }
+
+  .promo__background {
+    height: 768px;
     background-image: url("../img/promo/swiper-1-tablet.jpg");
   }
 
@@ -77,17 +130,21 @@
   }
 
   .promo__description {
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px);
     margin-bottom: 134px;
   }
 
   .promo__link {
-    transform: translateX(7px);
+    -webkit-transform: translateX(7px);
+        -ms-transform: translateX(7px);
+            transform: translateX(7px);
   }
 }
 
 @media (max-width: 768px) {
-  .promo {
+  .promo__background {
     background-image: url("../img/promo/swiper-1-mobile.jpg");
   }
 }
@@ -104,6 +161,10 @@
     min-height: 355px;
   }
 
+  .promo__background {
+    min-height: 355px;
+  }
+
   .promo__content {
     max-width: 100%;
     text-align: center;
@@ -117,13 +178,17 @@
   .promo__description {
     margin-bottom: 40px;
     font-weight: normal;
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .promo__link {
     padding: 12px 19px;
     font-size: 16px;
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 

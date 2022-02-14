@@ -13,11 +13,11 @@ html {
 }
 
 :root {
-  --text-color-main:  #333;
-  --text-color-accent:  #FFF;
+  --text-color-main:  #333333;
+  --text-color-accent:  #FFFFFF;
   --link-color: #9D5CD0;
   --link-color-active: #7943A4;
-  --border: 1px solid #CACACA;
+  --link-color-light: #D1A9F0;
 }
 
 body {
@@ -32,6 +32,10 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color-main);
+}
+
+main {
+  position: relative;
 }
 
 button, input {
@@ -87,10 +91,6 @@ p {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
-}
-
-* {
-  outline: none;
 }
 
 *:focus {
