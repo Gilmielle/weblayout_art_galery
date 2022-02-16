@@ -32,12 +32,18 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   };
 
-  document.querySelector('#burger').addEventListener('click', function() {
+  var searchBtn = document.querySelector('#search-btn');
+  var burger = document.querySelector('#burger');
+  burger.addEventListener('click', function() {
     document.querySelector('#menu').classList.add('is-active');
+    burger.setAttribute("tabindex", "-1");
+    searchBtn.setAttribute("tabindex", "-1");
     disableScroll();
   });
   document.querySelector('#exit').addEventListener('click', function() {
     document.querySelector('#menu').classList.remove('is-active');
+    burger.setAttribute("tabindex", "0");
+    searchBtn.setAttribute("tabindex", "0");
     enableScroll();
   });
 })

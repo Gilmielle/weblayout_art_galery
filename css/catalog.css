@@ -4,6 +4,7 @@
 }
 
 .catalog__title {
+  margin: 0;
   margin-bottom: 16px;
   font-weight: normal;
   font-size: 48px;
@@ -12,6 +13,7 @@
 
 .catalog__description {
   max-width: 1080px;
+  margin: 0;
   margin-bottom: 38px;
 }
 
@@ -59,6 +61,7 @@
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  margin: 0;
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 24px;
@@ -69,6 +72,7 @@
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  margin: 0;
   margin-bottom: 7px;
   font-size: 12px;
   line-height: 16px;
@@ -79,6 +83,7 @@
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  margin: 0;
 }
 
 .personality__link {
@@ -380,6 +385,7 @@
 }
 
 .artist-empty__title {
+  margin: 0;
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
@@ -387,6 +393,7 @@
 }
 
 .artist-empty__description {
+  margin: 0;
   margin-bottom: 5px;
   max-width: 275px;
   font-size: 16px;

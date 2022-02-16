@@ -14,13 +14,12 @@
   <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="css/simplebar.css">
   <link rel="stylesheet" href="css/choices.min.css">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -51,11 +50,25 @@
 
           <img class="main-navigation__logo logo" src="img/svg/logo.svg" alt="Blanchard - художественная галерея">
           
-          <form class="main-navigation__search-form search-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
-            <button class="btn search-form__btn" type="submit" aria-label="Поиск по сайту">
+          <button class="main-navigation__search-btn search-btn btn" id="search-btn" type="button" aria-label="Поиск по сайту">
+            <svg class="search-btn__icon" width="22" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+            </svg>
+          </button>
+
+          <form class="main-navigation__search-form search-form" id="search-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+            <button class="btn search-form__btn" type="submit">
               <svg class="search-form__icon" width="22" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+              </svg>
+            </button>
+            <input class="search-form__input" type="text" name="search-form-adaptive" required aria-label="Введите информацию, которую хотели бы найти">
+            <button class="btn search-form__btn search-form__btn_exit" id="search-exit-btn" type="button">
+              <svg class="search-form__icon" width="23" height="23" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.63635" width="37.2838" height="3.72838" transform="rotate(45 2.63635 0)" fill="white"/>
+                <rect x="0.00012207" y="26.3635" width="37.2838" height="3.72838" transform="rotate(-45 0.00012207 26.3635)" fill="white"/>
               </svg>
             </button>
           </form>
@@ -639,6 +652,19 @@
               </picture>
               <p class="personality__description">Представитель умбрийской школы кватроченто. Учился у Фьоренцо ди Лоренцо, вместе с Рафаэлем — у Перуджино, которому помогал при создании фресок Сикстинской капеллы Ватикана (1481—1482), а по некоторым данным — ещё и у Бенедетто Капорали, создателя дворца кардинала Пассерини, впоследствии расписанного Синьорелли. Вероятно, испытал влияние и Бенедетто Бонфильи, учителя Перуджино. Став зрелым мастером, Пинтуриккьо отказался от некоторых принципов Перуджино — однообразности и степенности фигур, единства времени и места, — что сближает его скорее с Боттичелли.</p>
             </div>
+            <div class="catalog__presonality personality" data-target="Mucha">
+              <h3 class="personality__title">Альфонс Муха</h3>
+              <p class="personality__life-dates">
+                <time datetime="1454">24 июля 1860</time>
+                —
+                <time datetime="1513-12-11">14 июля 1939.</time>
+              </p>
+              <picture>
+                <source type="image/webp" srcset="img/catalog/catalog-6@1x.webp 1x, img/catalog/catalog-6@2x.webp 2x">
+                <img class="personality__img" src="img/catalog/catalog-6@1x.jpg" srcset="img/catalog/catalog-6@2x.jpg 2x" alt="Альфонс Муха">
+              </picture>
+              <p class="personality__description">Чешско-моравский живописец, театральный художник, иллюстратор, ювелирный дизайнер и плакатист, один из наиболее известных представителей стиля «ар нуво». Альфонса Муху, которого еще при его жизни нарекали гениальным художником, сейчас называли бы скорее гениальным дизайнером. Ведь справедливости ради стоит сказать, что его живописные картины, в том числе и знаменитая серия «Славянская эпопея» и близко не были такими популярными, как тиражируемые образы романтических красавиц с афиш и этикеток. Художник достиг такого уровня мастерства в стиле ар-нуво, что его какое-то время даже называли «стилем Мухи».</p>
+            </div>
             <div class="catalog__presonality personality personality_unknown" data-target="unknown">
               <h3 class="personality__title">Что мы о нём знаем?</h3>
               <p class="personality__life-dates"></p>
@@ -831,7 +857,7 @@
                 </button>
                 <ul class="accordion__content">
                   <li class="accordion__option artist">
-                    <button class="artist__btn" type="button" data-path="unknown">Альфонс Муха</button>
+                    <button class="artist__btn" type="button" data-path="Mucha">Альфонс Муха</button>
                   </li>
                   <li class="accordion__option artist">
                     <button class="artist__btn" type="button" data-path="unknown">Пабло Пикассо</button>
@@ -1105,10 +1131,14 @@
             </div>
             <form class="contacts__form contacts-form" action="https://jsonplaceholder.typicode.com/posts" method="post" name="contacts-form">
               <span class="visually-hidden">Форма обратной связи</span>
-              <span class="visually-hidden">Введите имя</span>
-              <input class="contacts-form__input" type="text" name="contacts-form-name" placeholder="Имя*" data-validate-field="name" required>
-              <span class="visually-hidden">Введите телефон</span>
-              <input class="contacts-form__input" type="tel" name="contacts-form-phone" placeholder="Телефон*" data-validate-field="phone" required>
+              <label class="contacts-form__input-wrapper">
+                <span class="visually-hidden">Введите имя</span>
+                <input class="contacts-form__input" id="contacts-form-name" type="text" name="contacts-form-name" placeholder="Имя*" data-validate-field="name" required>
+              </label>
+              <label class="contacts-form__input-wrapper">
+                <span class="visually-hidden">Введите телефон</span>
+                <input class="contacts-form__input" type="tel" name="contacts-form-phone" placeholder="Телефон*" data-validate-field="phone" required>
+              </label>
               <button class="contacts-form__btn btn" type="submit">Заказать обратный звонок</button>
             </form>
             <div class="contacts__socials-part">
@@ -1137,8 +1167,8 @@
   <footer class="footer">
     <div class="footer__container container container_md container_sm container_xsm">
       <img class="footer__logo logo" src="img/svg/logo.svg" alt="Blanchard - художественная галерея">
+      <h3 class="visually-hidden">Список социальных сетей</h3>
       <ul class="footer__socials socials footer-socials">
-        <h3 class="visually-hidden">Список социальных сетей</h3>
         <li class="socials__item footer-socials__item">
           <a class="socials__link  footer-socials__link" href="#" aria-label="ВКонтакте">
             <svg class="socials__icon footer-socials__icon" width="46" height="46" viewbox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1172,7 +1202,7 @@
       </ul>
     </div>
   </footer>
-<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="js/simplebar.min.js"></script>
 <script src="js/secondary-navigation-toggle.js"></script>
 <script src="js/burger.js"></script>
 <script src="js/promo-bg-changer.js"></script>
@@ -1180,8 +1210,8 @@
 <script src="js/gallery-select.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/gallery-slider.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script src="js/gallery-modal-toggle.js"></script>
 <script src="js/accordion.js"></script>
 <script src="js/personality-changer.js"></script>
@@ -1190,7 +1220,7 @@
 <script src="js/inputmask.min.js"></script>
 <script src="js/just-validate.min.js"></script>
 <script src="js/contacts-form-validation.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+<script src="js/yamaps.js"></script>
 <script src="js/contacts-map.js"></script>
 <script src="js/main.js"></script>
 </body>

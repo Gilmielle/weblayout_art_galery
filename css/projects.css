@@ -3,6 +3,7 @@
 }
 
 .projects__title {
+  margin: 0;
   margin-bottom: 16px;
   font-weight: normal;
   font-size: 48px;
@@ -10,6 +11,7 @@
 }
 
 .projects__description {
+  margin: 0;
   margin-bottom: 18px;
   max-width: 1079px;
 }
@@ -137,6 +139,7 @@
 }
 
 .projects__subtitle {
+  margin: 0;
   margin-bottom: 23px;
   font-weight: 600;
   font-size: 24px;
@@ -266,6 +269,16 @@
   background-color: var(--link-color-light);
 }
 
+@media (max-width: 1400px) {
+  .projects__item {
+    text-align: center;
+  }
+
+  .projects__img {
+    max-width: calc(100% - 30px);
+  }
+}
+
 @media (max-width: 1024px) {
   .projects {
     padding-top: 40px;
@@ -334,7 +347,6 @@
 
   .projects__item {
     height: 65px;
-    text-align: center;
   }
 
   .projects__img {

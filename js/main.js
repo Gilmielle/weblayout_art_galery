@@ -1,4 +1,24 @@
 window.addEventListener('DOMContentLoaded', function() {
+  // раскрытие поиска в адаптиве
+  var searchBtn = document.querySelector('#search-btn');
+  var searchForm = document.querySelector('#search-form');
+  var exitBtn = document.querySelector('#search-exit-btn');
+  var burger = document.querySelector('#burger');
+
+  searchBtn.addEventListener('click', function () {
+    searchForm.classList.add('search-form_is-active');
+    searchBtn.setAttribute("tabindex", "-1");
+    if (screen.width <= 768) {
+      burger.setAttribute("tabindex", "-1");
+    }
+  });
+  
+  exitBtn.addEventListener('click', function () {
+    searchForm.classList.remove('search-form_is-active');
+    searchBtn.setAttribute("tabindex", "0");
+    burger.setAttribute("tabindex", "0");
+  });
+
   // Изменение текста в зависимости от ширины экрана
 
   var link = document.querySelector('.projects__link');
