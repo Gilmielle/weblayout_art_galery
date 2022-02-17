@@ -292,10 +292,14 @@
     row-gap: 12px;
   }
 
-  .contacts-form__input {
+  .contacts-form__input-wrapper {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+
+  .contacts-form__input {
+    width: 100%;
   }
 
   .contacts-form__btn {
@@ -355,9 +359,12 @@
     padding-bottom: 20px;
   }
 
+  .contacts-form__input-wrapper {
+    width: 100%;
+  }
+
   .contacts-form__input {
     padding: 3px 24px;
-    width: 100%;
   }
 
   .contacts-form__btn {

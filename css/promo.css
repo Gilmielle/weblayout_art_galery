@@ -131,16 +131,7 @@
   }
 
   .promo__description {
-    -webkit-transform: translateX(5px);
-        -ms-transform: translateX(5px);
-            transform: translateX(5px);
     margin-bottom: 134px;
-  }
-
-  .promo__link {
-    -webkit-transform: translateX(7px);
-        -ms-transform: translateX(7px);
-            transform: translateX(7px);
   }
 }
 

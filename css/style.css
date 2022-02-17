@@ -20,7 +20,7 @@ html {
   --link-color-light: #D1A9F0;
 }
 
-body {
+.page {
   min-width: 320px;
   margin: 0;
 	padding: 0;
@@ -34,31 +34,32 @@ body {
   color: var(--text-color-main);
 }
 
-main {
+.main {
   position: relative;
 }
 
-button, input {
+.input {
   font: inherit;
 }
 
-img {
+.img {
   max-width: 100%;
   height: auto;
 }
 
-a {
+.link {
   text-decoration: none;
   color: inherit;
 }
 
-ul {
+.list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-p {
+.paragraph { 
+  margin: 0;
   font-size: 16px;
   color: var(--text-color-main);
   line-height: 2;
@@ -74,6 +75,7 @@ p {
   padding: 0;
   background-color: transparent;
   border: none;
+  font: inherit;
   cursor: pointer;
 }
 
@@ -89,15 +91,7 @@ p {
 }
 
 *:focus {
-  outline: 2px solid #7943A4;
-}
-
-.section-heading {
-  margin-left: 40px;
-  margin-bottom: 25px;
-  font-weight: normal;
-  font-size: 40px;
-  color: var(--main-heading-color);
+  outline: 2px solid var(--link-color-active);
 }
 
 .clearfix::after {
@@ -125,18 +119,10 @@ p {
   .container_xsm {
     margin: 0 15px;
   }
-
-  .container_no-mb {
-    margin-bottom: 0;
-  }
 }
 
 @media (max-width: 320px) {
   .container_xsm {
     max-width: 290px;
-  }
-
-  .container_no-mb {
-    margin-bottom: 0;
   }
 }
