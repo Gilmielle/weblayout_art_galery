@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', function() {
     gallerySlide.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path;
       const target = modal.querySelector(`[data-target="${path}"]`);
-      console.log(target)
       modal.classList.add('modal_active');
       target.classList.add('modal__content_active');
+      disableScroll();
     })
   })
 
@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', function() {
     modal.classList.remove('modal_active');
     modal.querySelectorAll('.modal__content').forEach(function(contentInactive) {
       contentInactive.classList.remove('modal__content_active');
+      enableScroll();
     });
   });
 });
